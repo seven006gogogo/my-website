@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个网页</title>
+    <style>
+        /* CSS部分 - 控制网页样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #6a23b643;
+            color: #6d2e8bab;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: rgba(169, 126, 166, 0.503);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(7, 7, 7);
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #3835374e;
+        }
+        
+        h1 {
+            color: #562c718f;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+            border: 5px solid #faf8f8;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        h2 {
+            color: #383a3b;
+            border-bottom: 2px solid #907890a3;
+            padding-bottom: 10px;
+        }
+        
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .skills li {
+            background: #a35aa3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        button {
+            background: #bd92bd;
+            color: rgba(9, 9, 9, 0.403);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #302d8750;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ad7cc36c;
+            color: #b06f74;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML部分 - 网页结构 -->
+    <div class="container">
+        <header>
+            <h1>我的第一个网页</h1>
+             <希望你会喜欢>
+            <p>一个简单的链接网页</p >
+        </header>
+        
+        <section class="section about">
+            <h1>常用软件官网链接</h1>
+            <div class="category">
+        <h2 class="category-title">🎨 设计与多媒体</h2>
+        
+        <div class="software-item">
+            <a href=" " target="_blank">Photopea</a >
+            <p class="description">功能强大的在线图片编辑器，无需安装</p >
+        </div>
+        
+        <div class="software-item">
+            <a href="https://www.remove.bg" target="_blank">Remove.bg</a >
+            <p class="description">基于AI的在线图片背景移除工具</p >
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">💼 办公软件</h2>
+        
+        <div class="software-item">
+            <a href="https://www.microsoft.com/office" target="_blank">Microsoft Office</a >
+            <p class="description">包含Word、Excel、PowerPoint等组件的办公套件</p >
+        </div>
+        
+        <div class="software-item">
+            <a href="https://workspace.google.com" target="_blank">Google Workspace</a >
+            <p class="description">基于云的协作办公套件，含Docs、Sheets等</p >
+        </div>
+        
+        <div class="software-item">
+            <a href="https://www.wps.com" target="_blank">WPS Office</a >
+            <p class="description">由金山软件开发的办公软件，兼容Microsoft Office格式</p >
+        </div>
+        
+        <div class="software-item">
+            <a href="https://www.libreoffice.org" target="_blank">LibreOffice</a >
+            <p class="description">功能强大的开源免费办公套件</p >
+        </div>
+        
+        <div class="software-item">
+            <a href="https://www.openoffice.org/zh-tw/download/index.html" target="_blank">Apache OpenOffice</a >
+            <p class="description">另一款知名的开源办公软件</p >
+        </div>
+    </div>
+        </section>
+        
+        <section class="section skills">
+            <h2>后续希望添加的链接</h2>
+            <ul>
+                <li>浏览器类</li>
+                <li>小游戏类</li>
+                <li>娱乐类</li>
+            </ul>
+        </section>
+        
+        <section class="section contact">
+            <h2>联系我</h2>
+            <p>邮箱: example@email.com</p >
+            <p>电话: 123-456-7890</p >
+            <button id="contactBtn">点击联系我</button>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 我的第一个网页</p >
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript部分 - 添加交互功能
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            alert('感谢您的关注！我会尽快回复您。');
+        });
+        
+        // 添加一个简单的交互效果 - 点击技能项时改变颜色
+        const skillItems = document.querySelectorAll('.skills li');
+        skillItems.forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.backgroundColor = '#3498db';
+                this.style.color = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
